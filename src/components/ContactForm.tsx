@@ -65,7 +65,7 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center max-w-md mx-auto',
+        'flex flex-col items-center justify-center w-[80vw] max-w-md mx-auto',
         className
       )}
     >
@@ -119,7 +119,11 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Enter your message" {...field} />
+                  <Textarea
+                    placeholder="Enter your message"
+                    {...field}
+                    rows={5}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

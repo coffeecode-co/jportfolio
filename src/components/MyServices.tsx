@@ -65,7 +65,7 @@ export const MyServices = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-lg lg:text-xl">
+                <CardDescription className="text-sm sm:text-lg lg:text-xl">
                   {service.description}
                 </CardDescription>
               </CardContent>

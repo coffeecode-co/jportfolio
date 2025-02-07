@@ -88,7 +88,7 @@ export const MyExperience = () => {
             return (
               <Card
                 key={company}
-                className="flex flex-col items-center justify-around rounded-lg mb-4 min-h-[80vh] max-h-[80vh] w-[80vw] md:w-1/3"
+                className="flex flex-col items-center justify-around rounded-lg mb-4 border-muted-foreground min-h-[80vh] max-h-[80vh] w-[80vw] md:w-1/3"
               >
                 <CardHeader>
                   <CardTitle className="text-lg md:text-xl">

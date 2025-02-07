@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { AspectRatio } from './ui/aspect-ratio';
 import ProfileImg from '@/../public/profile-cartoon.png';
+import { Button } from './ui/button';
+import Link from 'next/link';
+import { FaWhatsapp } from 'react-icons/fa';
+import { Download } from 'lucide-react';
 
 export const HeroSection = () => {
   return (
@@ -9,7 +13,7 @@ export const HeroSection = () => {
         Front-End / FullStack Web & Mobile Developer
       </h1>
       <p className="text-xl mb-8 md:text-2xl">Desarrollador Full Stack</p>
-      <div className="w-80 justify-self-end">
+      <div className="w-80 justify-self-end ">
         <AspectRatio ratio={1}>
           <Image
             src={ProfileImg}
@@ -17,6 +21,29 @@ export const HeroSection = () => {
             className="rounded-md object-cover drop-shadow-cm"
           />
         </AspectRatio>
+        <div className="flex justify-around mt-8">
+          <Link
+            href={
+              'https://pub-001b6d146cb14cfcac56c049c5d435f1.r2.dev/Juan_Pablo_Leon_CV.pdf'
+            }
+            target="_blank"
+          >
+            <Button
+              variant="outline"
+              className="shadow-none hover:bg-background hover:border-primary min-w-32 "
+            >
+              Get CV <Download />
+            </Button>
+          </Link>
+          <Link href={'https://wa.me/573124134220'} target="_blank">
+            <Button
+              variant="outline"
+              className="shadow-none hover:bg-background hover:border-primary min-w-32 "
+            >
+              Talk to me <FaWhatsapp />
+            </Button>
+          </Link>
+        </div>
       </div>
     </main>
   );

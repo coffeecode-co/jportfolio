@@ -14,7 +14,6 @@ const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
 });
 
-// TODO: check metadata
 export const metadata: Metadata = {
   title: 'Juan Pablo Leon - Portfolio',
   description: 'Frontend Developer | Web Developer | Professional Portfolio',
@@ -23,9 +22,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Juan Pablo Leon - Portfolio',
     description: 'Frontend Developer | Web Developer | Professional Portfolio',
-    url: 'https://yourdomain.com',
+    url: 'https://juanpabloleonmaya.vercel.app/',
     siteName: 'Juan Pablo Leon Portfolio',
-    images: '/profile.jpg',
     type: 'website',
   },
 };

@@ -35,7 +35,7 @@ export const MyProjects = () => {
       </h3>
       <div className="flex flex-col items-center justify-center max-w-[70vw] mx-auto md:flex-row">
         {galleryItems.map((item) => {
-          return <ProjectThumbnail {...item} key={item.projectName} />;
+          return <ProjectThumbnail key={item.projectName} item={item} />;
         })}
       </div>
     </section>

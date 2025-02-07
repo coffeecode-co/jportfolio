@@ -53,7 +53,7 @@ export const MyServices = () => {
           return (
             <Card
               key={service.title}
-              className="flex flex-col items-center justify-around rounded-lg min-h-[50vh] max-h-[50vh] w-[80vw] md:w-1/3"
+              className="flex flex-col items-center justify-around border-muted-foreground rounded-lg min-h-[50vh] max-h-[50vh] w-[80vw] md:w-1/3"
             >
               <CardHeader className=" items-center gap-2">
                 <div className="border-2 border-primary rounded-[50%]">

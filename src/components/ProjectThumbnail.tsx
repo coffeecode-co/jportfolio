@@ -55,7 +55,7 @@ export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
   return (
     <div
       key={projectName}
-      className="w-full m-3 rounded-lg border-2 border-muted overflow-hidden"
+      className="w-full m-3 rounded-lg border-2 border-muted-foreground overflow-hidden"
       ref={elmRef}
     >
       <AspectRatio ratio={4 / 3}>

@@ -34,7 +34,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-white py-8">
+    <footer className="bg-primary text-background py-8">
       <div className="container mx-auto px-4">
         {/* Social Media Links */}
         <div className="flex justify-center space-x-1 mb-6">

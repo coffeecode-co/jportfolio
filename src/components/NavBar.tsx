@@ -9,6 +9,7 @@ import {
 import Link from 'next/link';
 import { Menu, Terminal } from 'lucide-react';
 import { Separator } from '@radix-ui/react-dropdown-menu';
+import { ThemeSwitch } from './ThemeSwitch';
 
 interface MenuItem {
   label: string;
@@ -28,6 +29,7 @@ export const NavBar = () => {
         </div>
 
         <div className="hidden md:flex space-x-4">
+          <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary mx-4" />
           {menuItems.map(({ label, href }) => (
             <Link key={href} href={href}>
               <Button
@@ -40,7 +42,9 @@ export const NavBar = () => {
           ))}
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex justify-center items-center">
+          <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary mx-4" />
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">

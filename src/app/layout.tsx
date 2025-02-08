@@ -3,6 +3,7 @@ import { Noto_Sans_Mono, Source_Code_Pro } from 'next/font/google';
 import './globals.css';
 import { Footer } from '@/components/Footer';
 import { NavBar } from '@/components/NavBar';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 const notoSansMono = Noto_Sans_Mono({
   variable: '--font-noto-sans-mono',
@@ -34,13 +35,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${notoSansMono.variable} ${sourceCodePro.variable} antialiased`}
       >
-        <NavBar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavBar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

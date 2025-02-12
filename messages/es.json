@@ -6,6 +6,11 @@
     "en": "Ingles",
     "es": "Español"
   },
+  "ThemeSwitcher": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
   "HeroSection": {
     "title": "Desarrollador FullStack / Web & Movil",
     "subtitle": "De Colombia, código con aroma a café.",

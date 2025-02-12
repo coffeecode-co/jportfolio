@@ -2,6 +2,10 @@
   "Navbar": {
     "contact": "Escríbeme"
   },
+  "LangSwitcher": {
+    "en": "Ingles",
+    "es": "Español"
+  },
   "HeroSection": {
     "title": "Desarrollador FullStack / Web & Movil",
     "subtitle": "De Colombia, código con aroma a café.",

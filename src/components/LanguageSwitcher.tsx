@@ -1,6 +1,8 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import {
   NavigationMenu,
@@ -10,12 +12,12 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { Button } from './ui/button';
-import Link from 'next/link';
 import { Languages } from 'lucide-react';
 
-// TODO: this is a initial state of component.
+const locales = ['en', 'es']; // Add more languages as needed
 
 export const LanguageSwitcher = () => {
+  const t = useTranslations('LangSwitcher');
   const pathname = usePathname();
 
   const changeLanguage = (locale: string) => {
@@ -35,12 +37,13 @@ export const LanguageSwitcher = () => {
             <Languages size={16} />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <Link href={changeLanguage('en')}>
-              <Button>En</Button>
-            </Link>
-            <Link href={changeLanguage('es')}>
-              <Button>Es</Button>
-            </Link>
+            {locales.map((local) => (
+              <Link key={local} href={changeLanguage(local)}>
+                <Button variant={'ghost'} className="w-full">
+                  {t(local)}
+                </Button>
+              </Link>
+            ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>

@@ -2,6 +2,10 @@
   "Navbar": {
     "contact": "Say Hello!"
   },
+  "LangSwitcher": {
+    "en": "English",
+    "es": "Spanish"
+  },
   "HeroSection": {
     "title": "FullStack Web & Mobile Developer",
     "subtitle": "From Colombia, code with coffee aroma.",

@@ -13,8 +13,9 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Button } from './ui/button';
 import { Languages } from 'lucide-react';
+import { AvalibleLocales } from '@/i18n/types';
 
-const locales = ['en', 'es']; // Add more languages as needed
+const locales: AvalibleLocales[] = ['en', 'es']; // Add more languages as needed
 
 export const LanguageSwitcher = () => {
   const t = useTranslations('LangSwitcher');

@@ -9,6 +9,7 @@ import '../globals.css';
 import { Footer } from '@/components/Footer';
 import { NavBar } from '@/components/NavBar';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import type { AvalibleLocales } from '@/i18n/types';
 
 const notoSansMono = Noto_Sans_Mono({
   variable: '--font-noto-sans-mono',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 interface Params {
-  locale: 'en' | 'es';
+  locale: AvalibleLocales;
 }
 
 export default async function RootLayout({

@@ -5,19 +5,23 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { Button } from './ui/button';
 import { Languages } from 'lucide-react';
 import { AvalibleLocales } from '@/i18n/types';
+import { cn } from '@/lib/utils';
 
 const locales: AvalibleLocales[] = ['en', 'es']; // Add more languages as needed
 
-export const LanguageSwitcher = () => {
+export const LanguageSwitcher = ({
+  btnClassName,
+}: {
+  btnClassName?: string;
+}) => {
   const t = useTranslations('LangSwitcher');
   const pathname = usePathname();
 
@@ -28,26 +32,21 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger
-            showArrowIcon={false}
-            className="border border-transparent p-2 h-9 w-9 hover:!bg-background hover:border-primary"
-          >
-            <Languages size={16} />
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            {locales.map((local) => (
-              <Link key={local} href={changeLanguage(local)}>
-                <Button variant={'ghost'} className="w-full">
-                  {t(local)}
-                </Button>
-              </Link>
-            ))}
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon" className={cn(btnClassName)}>
+          <Languages />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        {locales.map((local) => (
+          <Link key={local} href={changeLanguage(local)}>
+            <Button variant={'ghost'} className="w-full">
+              {t(local)}
+            </Button>
+          </Link>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };

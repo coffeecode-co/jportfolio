@@ -35,7 +35,7 @@ export const NavBar = () => {
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary" />
           <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary" />
           {menuItems.map(({ label, href }) => (
             <Link key={href} href={href}>
@@ -62,8 +62,8 @@ export const NavBar = () => {
             <DropdownMenuContent align="end">
               {menuItems.map(({ label, href }) => (
                 <DropdownMenuItem key={href}>
-                  <Link href={href} className="w-full">
-                    {label}
+                  <Link href={href} className="w-full text-center">
+                    {t(label)}
                   </Link>
                 </DropdownMenuItem>
               ))}

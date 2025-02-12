@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 import { Noto_Sans_Mono, Source_Code_Pro } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { Footer } from '@/components/Footer';
 import { NavBar } from '@/components/NavBar';
 import { ThemeProvider } from '@/components/ThemeProvider';
@@ -34,10 +36,16 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
-  const locale = await getLocale();
+  // const locale = await getLocale();
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
   const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>

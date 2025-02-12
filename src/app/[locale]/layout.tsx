@@ -34,15 +34,19 @@ export const metadata: Metadata = {
   },
 };
 
+interface Params {
+  locale: 'en' | 'es';
+}
+
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<Params>;
 }>) {
-  // const locale = await getLocale();
-  if (!routing.locales.includes(locale as any)) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
 

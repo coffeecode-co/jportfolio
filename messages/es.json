@@ -69,6 +69,28 @@
   },
   "MyService": {
     "title": "Mis servicios",
-    "p": "Me especializo en la creación de sitios web y aplicaciones móviles atractivos y fáciles de usar, junto con análisis basados en datos y estrategias de SEO para aumentar la visibilidad e impulsar el crecimiento del negocio."
+    "p": "Me especializo en la creación de sitios web y aplicaciones móviles atractivos y fáciles de usar, junto con análisis basados en datos y estrategias de SEO para aumentar la visibilidad e impulsar el crecimiento del negocio.",
+    "web": {
+      "title": "Diseño y desarrollo web",
+      "p": "Creo sitios web visualmente atractivos y fáciles de usar, y desarrollo soluciones sólidas adaptadas a las necesidades de su empresa."
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "p": "Diseño y desarrollo aplicaciones móviles intuitivas y de alto rendimiento adaptadas para atraer a los usuarios y hacer crecer su negocio."
+    },
+    "seo": {
+      "title": "SEO",
+      "p": "Proporcionamos información basada en datos para optimizar el comportamiento de los usuarios y mejorar la clasificación de su sitio web en los motores de búsqueda, impulsando el crecimiento y la visibilidad."
+    }
+  },
+  "ContactUs": {
+    "title": "Escríbeme",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Ingrese su nombre",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Ingrese su email",
+    "msgLabel": "Message",
+    "msgPlaceholder": "Deje su mensaje",
+    "submitBtn": "Enviar"
   }
 }

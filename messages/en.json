@@ -69,6 +69,28 @@
   },
   "MyService": {
     "title": "My Services",
-    "p": "I specialize in creating engaging, user-friendly websites and mobile apps, along with data-driven analytics and SEO strategies to boost visibility and drive business growth."
+    "p": "I specialize in creating engaging, user-friendly websites and mobile apps, along with data-driven analytics and SEO strategies to boost visibility and drive business growth.",
+    "web": {
+      "title": "Web Design & Development",
+      "p": "We create visually appealing, user-friendly websites and develop robust solutions tailored to your business needs."
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "p": "We design and develop intuitive, high-performance mobile applications tailored to engage users and grow your business."
+    },
+    "seo": {
+      "title": "SEO",
+      "p": "We provide data-driven insights to optimize user behavior and boost your website's search engine rankings, driving growth and visibility."
+    }
+  },
+  "ContactUs": {
+    "title": "Contact Me",
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "msgLabel": "Message",
+    "msgPlaceholder": "Enter your message",
+    "submitBtn": "Submit"
   }
 }

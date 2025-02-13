@@ -1,6 +1,5 @@
-// components/Navbar.js
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { ThemeSwitch } from './ThemeSwitch';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -14,16 +13,16 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Menu, Terminal } from 'lucide-react';
 import { Separator } from '@radix-ui/react-dropdown-menu';
-import { getLocale } from 'next-intl/server';
 
 interface MenuItem {
   label: string;
   href: string;
 }
 
-export const NavBar = async () => {
+export const NavBar = () => {
   const t = useTranslations('Navbar');
-  const locale = await getLocale();
+  const locale = useLocale();
+
   const menuItems: MenuItem[] = [
     { label: 'contact', href: `${locale}/contact` },
   ];

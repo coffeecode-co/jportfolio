@@ -92,5 +92,8 @@
     "msgLabel": "Message",
     "msgPlaceholder": "Enter your message",
     "submitBtn": "Submit"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
   }
 }

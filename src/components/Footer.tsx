@@ -4,6 +4,8 @@ import { AboutApp } from './AboutApp';
 import { Button } from './ui/button';
 
 import type { IconType } from 'react-icons/lib';
+import { useTranslations } from 'next-intl';
+import { Copyright } from 'lucide-react';
 
 interface SotialMedia {
   name: string;
@@ -31,6 +33,7 @@ const sotialMedias: SotialMedia[] = [
 ];
 
 export const Footer = () => {
+  const t = useTranslations('Footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -50,8 +53,9 @@ export const Footer = () => {
         </div>
 
         {/* Copyright Info */}
-        <div className="text-center text-sm">
-          © {currentYear} Juan Pablo Leon. All rights reserved.
+        <div className="flex justify-center text-sm">
+          <Copyright className="justify-self-center self-start inline-block mx-1 h-3" />
+          <span>{`${currentYear} ${t('rights')}`}</span>
         </div>
 
         {/* About App Component */}

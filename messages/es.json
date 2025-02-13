@@ -92,5 +92,8 @@
     "msgLabel": "Message",
     "msgPlaceholder": "Deje su mensaje",
     "submitBtn": "Enviar"
+  },
+  "Footer": {
+    "rights": "Todos los derechos reservados."
   }
 }

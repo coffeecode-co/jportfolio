@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "author": {
-    "name": "Juan Pablo Leon - from coffeecode-co"
+    "name": "Juan Pablo Leon - from Juanleon8581@gmail.com"
   },
   "scripts": {
     "dev": "next dev --turbopack",

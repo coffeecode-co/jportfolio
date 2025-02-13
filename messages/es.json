@@ -66,5 +66,9 @@
   },
   "MySkills": {
     "title": "Mis Habilidades"
+  },
+  "MyService": {
+    "title": "Mis servicios",
+    "p": "Me especializo en la creación de sitios web y aplicaciones móviles atractivos y fáciles de usar, junto con análisis basados en datos y estrategias de SEO para aumentar la visibilidad e impulsar el crecimiento del negocio."
   }
 }

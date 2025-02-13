@@ -66,5 +66,9 @@
   },
   "MySkills": {
     "title": "My Skills"
+  },
+  "MyService": {
+    "title": "My Services",
+    "p": "I specialize in creating engaging, user-friendly websites and mobile apps, along with data-driven analytics and SEO strategies to boost visibility and drive business growth."
   }
 }

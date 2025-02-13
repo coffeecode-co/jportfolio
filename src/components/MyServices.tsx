@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from './ui/card';
+import { useTranslations } from 'next-intl';
 
 interface Service {
   title: string;
@@ -36,16 +37,13 @@ const servicesArray: Service[] = [
 ];
 
 export const MyServices = () => {
+  const t = useTranslations('MyService');
   return (
     <section>
       <div className="bg-primary text-background">
         <div className="flex items-center justify-center flex-col pt-20 pb-80 text-center max-w-[80vw] md:max-w-screen-md mx-auto sm:pt-32">
-          <h3 className="text-2xl font-bold sm:text-4xl"> My Services </h3>
-          <p className="text-lg sm:text-xl mt-4">
-            I specialize in creating engaging, user-friendly websites and mobile
-            apps, along with data-driven analytics and SEO strategies to boost
-            visibility and drive business growth..
-          </p>
+          <h3 className="text-2xl font-bold sm:text-4xl">{t('title')}</h3>
+          <p className="text-lg sm:text-xl mt-4">{t('p')}</p>
         </div>
       </div>
       <div className="flex flex-wrap items-center flex-col md:flex-row justify-center text-center mt-[-15rem] max-w-[80vw] md:max-w-screen-lg mx-auto">

@@ -5,11 +5,13 @@ import { MyExperience } from '@/components/MyExperience';
 import { MyProjects } from '@/components/MyProjects';
 import { MyServices } from '@/components/MyServices';
 import { MySkills } from '@/components/MySkills';
+import { NavBar } from '@/components/NavBar';
 import { Separator } from '@radix-ui/react-dropdown-menu';
 
 export default function Home() {
   return (
     <main>
+      <NavBar />
       <HeroSection />
       <AboutMe />
       <MyExperience />

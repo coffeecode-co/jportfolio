@@ -19,13 +19,18 @@ interface MenuItem {
   href: string;
 }
 
-export const NavBar = () => {
+type FromProp = 'index' | 'contact';
+
+export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
   const t = useTranslations('Navbar');
   const locale = useLocale();
 
   const menuItems: MenuItem[] = [
     { label: 'contact', href: `${locale}/contact` },
   ];
+  const mobileMenu = menuItems.map((item) =>
+    !item.href.includes(from) ? item : null
+  );
 
   return (
     <>
@@ -62,13 +67,14 @@ export const NavBar = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              {menuItems.map(({ label, href }) => (
-                <DropdownMenuItem key={href}>
-                  <Link href={href} className="w-full text-center">
-                    {t(label)}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
+              {mobileMenu.length !== 0 &&
+                menuItems.map(({ label, href }) => (
+                  <DropdownMenuItem key={href}>
+                    <Link href={href} className="w-full text-center">
+                      {t(label)}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

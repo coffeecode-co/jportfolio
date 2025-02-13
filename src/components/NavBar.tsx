@@ -14,16 +14,19 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Menu, Terminal } from 'lucide-react';
 import { Separator } from '@radix-ui/react-dropdown-menu';
+import { getLocale } from 'next-intl/server';
 
 interface MenuItem {
   label: string;
   href: string;
 }
 
-const menuItems: MenuItem[] = [{ label: 'contact', href: '/contact' }];
-
-export const NavBar = () => {
+export const NavBar = async () => {
   const t = useTranslations('Navbar');
+  const locale = await getLocale();
+  const menuItems: MenuItem[] = [
+    { label: 'contact', href: `${locale}/contact` },
+  ];
 
   return (
     <>

@@ -45,7 +45,7 @@ export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
           <LanguageSwitcher btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary" />
           <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary" />
           {menuItems.map(({ label, href }) => (
-            <Link key={href} href={href}>
+            <Link key={href} href={!href.includes(`/${from}`) ? href : ''}>
               <Button
                 variant="outline"
                 className="border-transparent shadow-none hover:bg-background hover:border-primary"
@@ -67,14 +67,16 @@ export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              {mobileMenu.length !== 0 &&
-                menuItems.map(({ label, href }) => (
-                  <DropdownMenuItem key={href}>
-                    <Link href={href} className="w-full text-center">
-                      {t(label)}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
+              {menuItems.map(({ label, href }) => (
+                <DropdownMenuItem key={href}>
+                  <Link
+                    href={!href.includes(`/${from}`) ? href : ''}
+                    className="w-full text-center"
+                  >
+                    {t(label)}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

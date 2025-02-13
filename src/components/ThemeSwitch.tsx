@@ -1,9 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { useTranslations } from 'next-intl';
 
+import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -13,8 +14,11 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
 
+const themes: string[] = ['light', 'dark', 'system'];
+
 export const ThemeSwitch = ({ btnClassName }: { btnClassName?: string }) => {
   const { setTheme } = useTheme();
+  const t = useTranslations('ThemeSwitcher');
 
   return (
     <DropdownMenu>
@@ -25,16 +29,16 @@ export const ThemeSwitch = ({ btnClassName }: { btnClassName?: string }) => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
-        </DropdownMenuItem>
+      <DropdownMenuContent>
+        {themes.map((theme) => (
+          <DropdownMenuItem
+            key={theme}
+            onClick={() => setTheme(theme)}
+            className="justify-center"
+          >
+            {t(theme)}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -1,4 +1,9 @@
-// components/Navbar.js
+import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+
+import { ThemeSwitch } from './ThemeSwitch';
+import { LanguageSwitcher } from './LanguageSwitcher';
+
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -6,19 +11,22 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import Link from 'next/link';
 import { Menu, Terminal } from 'lucide-react';
 import { Separator } from '@radix-ui/react-dropdown-menu';
-import { ThemeSwitch } from './ThemeSwitch';
 
 interface MenuItem {
   label: string;
   href: string;
 }
 
-const menuItems: MenuItem[] = [{ label: 'Say Hello!', href: '/contact' }];
-
 export const NavBar = () => {
+  const t = useTranslations('Navbar');
+  const locale = useLocale();
+
+  const menuItems: MenuItem[] = [
+    { label: 'contact', href: `${locale}/contact` },
+  ];
+
   return (
     <>
       <nav className="flex items-center justify-between px-8 py-4">
@@ -29,20 +37,22 @@ export const NavBar = () => {
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary mx-4" />
+          <LanguageSwitcher btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary" />
+          <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary" />
           {menuItems.map(({ label, href }) => (
             <Link key={href} href={href}>
               <Button
                 variant="outline"
                 className="border-transparent shadow-none hover:bg-background hover:border-primary"
               >
-                {label}
+                {t(label)}
               </Button>
             </Link>
           ))}
         </div>
 
         <div className="md:hidden flex justify-center items-center">
+          <LanguageSwitcher />
           <ThemeSwitch btnClassName="border-transparent shadow-none hover:bg-background hover:border-primary mx-4" />
 
           <DropdownMenu>
@@ -54,8 +64,8 @@ export const NavBar = () => {
             <DropdownMenuContent align="end">
               {menuItems.map(({ label, href }) => (
                 <DropdownMenuItem key={href}>
-                  <Link href={href} className="w-full">
-                    {label}
+                  <Link href={href} className="w-full text-center">
+                    {t(label)}
                   </Link>
                 </DropdownMenuItem>
               ))}

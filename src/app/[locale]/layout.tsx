@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+
 import { Noto_Sans_Mono, Source_Code_Pro } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { Footer } from '@/components/Footer';
 import { NavBar } from '@/components/NavBar';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import type { AvalibleLocales } from '@/i18n/types';
 
 const notoSansMono = Noto_Sans_Mono({
   variable: '--font-noto-sans-mono',
@@ -29,13 +35,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+interface Params {
+  locale: AvalibleLocales;
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<Params>;
 }>) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${notoSansMono.variable} ${sourceCodePro.variable} antialiased`}
       >
@@ -45,9 +63,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar />
-          {children}
-          <Footer />
+          <NextIntlClientProvider messages={messages}>
+            <NavBar />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

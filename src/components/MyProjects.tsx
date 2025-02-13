@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { ProjectThumbnail } from './ProjectThumbnail';
 
 export interface GalleryItem {
@@ -28,11 +30,10 @@ const galleryItems: GalleryItem[] = [
 ];
 
 export const MyProjects = () => {
+  const t = useTranslations('MyProjects');
   return (
     <section className="my-16" id={'projects'}>
-      <h3 className="text-2xl font-bold text-center mb-10">
-        Some of my projects:
-      </h3>
+      <h3 className="text-2xl font-bold text-center mb-10">{t('title')}</h3>
       <div className="flex flex-col items-center justify-center max-w-[70vw] mx-auto md:flex-row">
         {galleryItems.map((item) => {
           return <ProjectThumbnail key={item.projectName} item={item} />;

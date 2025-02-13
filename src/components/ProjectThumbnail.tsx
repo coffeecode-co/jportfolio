@@ -1,8 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { type PointerEvent, type RefObject, useRef } from 'react';
 import Image from 'next/image';
+
 import { AspectRatio } from './ui/aspect-ratio';
 import { Button } from './ui/button';
 import { motion } from 'motion/react';
@@ -94,11 +96,13 @@ export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
 };
 
 const ProjectCaption = ({ url }: { url: string }) => {
+  const t = useTranslations('MyProjects');
+
   return (
     <div>
       <Link href={url} target="_blank">
         <Button variant={'outline'} className="border border-primary">
-          See more <ChevronRight />
+          {t('projectBtn')} <ChevronRight />
         </Button>
       </Link>
     </div>

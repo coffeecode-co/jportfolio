@@ -1,9 +1,9 @@
 {
   "name": "personal-portfolio-dev",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "author": {
-    "name": "Juan Pablo Leon - from coffeecode-co"
+    "name": "Juan Pablo Leon - from Juanleon8581@gmail.com"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -31,6 +31,7 @@
     "lucide-react": "^0.474.0",
     "motion": "^12.3.1",
     "next": "15.1.6",
+    "next-intl": "^3.26.3",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

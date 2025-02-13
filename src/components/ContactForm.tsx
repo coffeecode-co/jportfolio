@@ -18,6 +18,7 @@ import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { cn } from '@/lib/utils';
 import { emailSend } from '@/config/adapters/email';
+import { useTranslations } from 'next-intl';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -28,6 +29,7 @@ const formSchema = z.object({
 });
 
 export const ContactForm = ({ className = '' }: { className?: string }) => {
+  const t = useTranslations('ContactUs');
   const [canSend, setCanSend] = useState(true);
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -41,12 +43,10 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
 
   // 2. Define a submit handler.
   function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log('Form submitted:', data);
     setCanSend(false);
     emailSend(data)
       .then((sended) => {
         if (!sended) {
-          console.error('Failed to send email');
           return;
         }
         console.log('sended');
@@ -58,8 +58,6 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
       .finally(() => {
         setCanSend(true);
       });
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
   }
 
   return (
@@ -70,39 +68,37 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
       )}
     >
       <h1 className="text-2xl font-bold mb-6 text-center md:text-4xl">
-        Contact Us
+        {t('title')}
       </h1>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-4 w-full"
         >
-          {/* Campo Name */}
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>{t('nameLabel')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your name" {...field} />
+                  <Input placeholder={t('namePlaceholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          {/* Campo Email */}
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{t('emailLabel')}</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t('emailPlaceholder')}
                     {...field}
                   />
                 </FormControl>
@@ -111,16 +107,15 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
             )}
           />
 
-          {/* Campo Message */}
           <FormField
             control={form.control}
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>{t('msgLabel')}</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Enter your message"
+                    placeholder={t('msgPlaceholder')}
                     {...field}
                     rows={5}
                   />
@@ -132,7 +127,7 @@ export const ContactForm = ({ className = '' }: { className?: string }) => {
 
           {/* Botón de envío */}
           <Button type="submit" className="w-full" disabled={!canSend}>
-            Submit
+            {t('submitBtn')}
           </Button>
         </form>
       </Form>

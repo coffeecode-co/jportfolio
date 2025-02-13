@@ -1,0 +1,99 @@
+{
+  "Navbar": {
+    "contact": "Say Hello!"
+  },
+  "LangSwitcher": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "ThemeSwitcher": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "HeroSection": {
+    "title": "FullStack Web & Mobile Developer",
+    "subtitle": "From Colombia, code with coffee aroma.",
+    "cvBtn": "Get CV",
+    "wppBtn": "Talk to me"
+  },
+  "AboutMe": {
+    "greeting": "Hi, I'm Juan. Nice to meet you.",
+    "resume": "Since starting my career as a Software Developer over 5 years ago, I've specialized in building web and hybrid mobile solutions for the financial sector, while also gaining valuable experience in IT customer service. I'm highly analytical, deeply curious, and constantly sharpening my skills to adapt and excel in dynamic environments."
+  },
+  "MyExperience": {
+    "achievements": "Achievements",
+    "freelancer": {
+      "company": "Freelancer",
+      "role": "Full-Stack Developer",
+      "roleDescription": "Working as an independent contractor, providing end-to-end software development services to clients across various industries. Responsible for designing, developing, and deploying scalable web and mobile applications, ensuring high-quality deliverables and client satisfaction.",
+      "beganDate": "2024",
+      "endDate": "Present",
+      "achievements": {
+        "one": "Implemented modern technologies and frameworks (e.g., React, Node.js, Next.js) to build performant and user-friendly applications.",
+        "two": "Collaborated closely with clients to understand their business needs, translating them into technical solutions and delivering tailored results.",
+        "three": "Optimized application performance and scalability, improving load times and user experience for end users."
+      }
+    },
+    "inaltec": {
+      "company": "Inaltec SAS",
+      "role": "Front-End Hybrid Mobile Developer",
+      "roleDescription": "Part of the Iuvity team responsible for developing a mobile application Davivienda banking company. The company specializes in providing essential services to the banking sector.",
+      "beganDate": "2019",
+      "endDate": "2024",
+      "achievements": {
+        "one": "Led the migration of a legacy application from a hardcoded PhoneGap instance to a modern framework, ensuring minimal disruption to the end-user experience.",
+        "two": "Successfully addressed significant technical debt within the legacy codebase, improving maintainability and scalability of the application.",
+        "three": "Executed a critical internal process that enhanced the application's performance and reliability, mitigating potential risks to the customer experience during the transition."
+      }
+    },
+    "arus": {
+      "company": "ARUS",
+      "role": "Support Analyst",
+      "roleDescription": "Provided application and hardware support directly to end customers, fostering the development of critical soft skills such as analyzing, understanding, and scaling customer needs and requirements.",
+      "beganDate": "2017",
+      "endDate": "2019",
+      "achievements": {
+        "one": "Quickly became a key contributor in the role, taking on the responsibility of mentoring colleagues and future team members by sharing acquired knowledge.",
+        "two": "Developed and maintained comprehensive documentation for internal processes in the company's knowledge database, ensuring consistency and accessibility of information.",
+        "three": "Trained new employees, enabling them to effectively onboard and contribute to the team's success."
+      }
+    }
+  },
+  "MyProjects": {
+    "title": "Some of my projects",
+    "projectBtn": "See More"
+  },
+  "MySkills": {
+    "title": "My Skills"
+  },
+  "MyService": {
+    "title": "My Services",
+    "p": "I specialize in creating engaging, user-friendly websites and mobile apps, along with data-driven analytics and SEO strategies to boost visibility and drive business growth.",
+    "web": {
+      "title": "Web Design & Development",
+      "p": "We create visually appealing, user-friendly websites and develop robust solutions tailored to your business needs."
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "p": "We design and develop intuitive, high-performance mobile applications tailored to engage users and grow your business."
+    },
+    "seo": {
+      "title": "SEO",
+      "p": "We provide data-driven insights to optimize user behavior and boost your website's search engine rankings, driving growth and visibility."
+    }
+  },
+  "ContactUs": {
+    "title": "Contact Me",
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "msgLabel": "Message",
+    "msgPlaceholder": "Enter your message",
+    "submitBtn": "Submit"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  }
+}

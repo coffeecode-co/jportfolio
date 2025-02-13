@@ -1,4 +1,5 @@
 import { ContactForm } from '@/components/ContactForm';
+import { NavBar } from '@/components/NavBar';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -23,5 +24,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ContactForm className="h-screen" />;
+  return (
+    <>
+      <NavBar from="contact" />
+      <ContactForm className="h-screen" />
+    </>
+  );
 }

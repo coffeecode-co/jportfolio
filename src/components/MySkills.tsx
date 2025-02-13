@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import {
   IoLogoReact,
   IoLogoIonic,
@@ -81,11 +82,11 @@ const skills: Skill[] = [
 ];
 
 export const MySkills = () => {
+  const t = useTranslations('MySkills');
   return (
     <section className="py-10 sm:py-20">
       <h3 className="text-center text-2xl font-bold md:text-4xl">
-        {' '}
-        My Skills{' '}
+        {t('title')}
       </h3>
       <div className="flex flex-wrap items-center justify-center w-[80vw] gap-6 mx-auto my-10 sm:py-20">
         {skills.map(({ name, Icon }) => (
@@ -99,7 +100,7 @@ export const MySkills = () => {
               scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
             }}
           >
-            <Icon className="text-muted-foreground" />
+            <Icon className="text-muted-foreground mx-auto" />
           </motion.div>
         ))}
       </div>

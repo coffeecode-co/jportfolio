@@ -19,7 +19,6 @@ import { Textarea } from './ui/textarea';
 import { cn } from '@/lib/utils';
 import { emailSend } from '@/config/adapters/email';
 import { useTranslations } from 'next-intl';
-import { C } from 'vitest/dist/chunks/reporters.6vxQttCV.js';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),

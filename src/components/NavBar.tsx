@@ -28,9 +28,6 @@ export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
   const menuItems: MenuItem[] = [
     { label: 'contact', href: `${locale}/contact` },
   ];
-  const mobileMenu = menuItems.map((item) =>
-    !item.href.includes(from) ? item : null
-  );
 
   return (
     <>

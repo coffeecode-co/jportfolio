@@ -7,7 +7,6 @@ import { routing } from '@/i18n/routing';
 import { Noto_Sans_Mono, Source_Code_Pro } from 'next/font/google';
 import '../globals.css';
 import { Footer } from '@/components/Footer';
-import { NavBar } from '@/components/NavBar';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import type { AvalibleLocales } from '@/i18n/types';
 

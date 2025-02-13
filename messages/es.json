@@ -12,7 +12,7 @@
     "system": "Sistema"
   },
   "HeroSection": {
-    "title": "Desarrollador FullStack / Web & Movil",
+    "title": "Desarrollador FullStack / Web & Móvil",
     "subtitle": "De Colombia, código con aroma a café.",
     "cvBtn": "Mi HV/CV",
     "wppBtn": "Escríbeme"
@@ -20,5 +20,51 @@
   "AboutMe": {
     "greeting": "Hola, soy Juan. Encantado de conocerte.",
     "resume": "Desde que comencé mi carrera como desarrollador de software hace más de 5 años, me he especializado en la creación de soluciones web y móviles híbridas para el sector financiero, al tiempo que he adquirido una valiosa experiencia en el servicio de atención al cliente de TI. Soy muy analítico, profundamente curioso y perfecciono constantemente mis habilidades para adaptarme y sobresalir en entornos dinámicos."
+  },
+  "MyExperience": {
+    "achievements": "Logos",
+    "freelancer": {
+      "company": "Freelancer",
+      "role": "Desarrollador Full-Stack",
+      "roleDescription": "Trabajo como contratista independiente, prestando servicios integrales de desarrollo de software a clientes de diversos sectores. Responsable del diseño, desarrollo y despliegue de aplicaciones web y móviles escalables, garantizando resultados de alta calidad y la satisfacción del cliente.",
+      "beganDate": "2024",
+      "endDate": "Actual",
+      "achievements": {
+        "one": "Implementación de tecnologías y marcos modernos (p. ej., React, Node.js, Next.js) para crear aplicaciones eficaces y fáciles de usar.",
+        "two": "Colaboró estrechamente con los clientes para comprender sus necesidades empresariales, traducirlas en soluciones técnicas y ofrecer resultados a medida.",
+        "three": "Optimización del rendimiento y la escalabilidad de las aplicaciones, mejorando los tiempos de carga y la experiencia de los usuarios finales."
+      }
+    },
+    "inaltec": {
+      "company": "Inaltec SAS",
+      "role": "Desarollador Móvil Front-End",
+      "roleDescription": "Parte del equipo Iuvity responsable del desarrollo de la aplicación móvil del banco Davivienda. La empresa está especializada en la prestación de servicios esenciales para el sector bancario.",
+      "beganDate": "2019",
+      "endDate": "2024",
+      "achievements": {
+        "one": "Dirigí la migración de una aplicación heredada de una instancia de PhoneGap a un framework moderno, garantizando una interrupción mínima de la experiencia del usuario final.",
+        "two": "Se abordó con éxito la importante deuda técnica de la base de código heredada, mejorando el mantenimiento y la escalabilidad de la aplicación.",
+        "three": "Ejecuté procesos internos críticos que mejoró el rendimiento y la fiabilidad de la aplicación, mitigando los riesgos potenciales para la experiencia del cliente durante la transición."
+      }
+    },
+    "arus": {
+      "company": "ARUS",
+      "role": "Analista de soporte",
+      "roleDescription": "Proporcionó soporte de aplicaciones y hardware directamente a los clientes finales, fomentando el desarrollo de competencias interpersonales críticas como el análisis, la comprensión y la adaptación a las necesidades y requisitos de los clientes.",
+      "beganDate": "2017",
+      "endDate": "2019",
+      "achievements": {
+        "one": "Rápidamente me convirtí en un colaborador clave en el puesto, asumiendo la responsabilidad de tutelar a colegas y futuros miembros del equipo compartiendo los conocimientos adquiridos.",
+        "two": "Desarrollé y mantuvo una documentación exhaustiva de los procesos internos en la base de datos de conocimientos de la empresa, garantizando la coherencia y la accesibilidad de la información.",
+        "three": "Formé a nuevos empleados, permitiéndoles incorporarse eficazmente y contribuir al éxito del equipo."
+      }
+    }
+  },
+  "MyProjects": {
+    "title": "Algunos de mis proyectos",
+    "projectBtn": "Saber más"
+  },
+  "MySkills": {
+    "title": "Mis Habilidades"
   }
 }

@@ -100,7 +100,7 @@ export const MySkills = () => {
               scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
             }}
           >
-            <Icon className="text-muted-foreground" />
+            <Icon className="text-muted-foreground mx-auto" />
           </motion.div>
         ))}
       </div>

@@ -92,7 +92,7 @@ export const MySkills = () => {
         {skills.map(({ name, Icon }) => (
           <motion.div
             key={name}
-            className="w-1/6 text-5xl text-primary md:text-9xl"
+            className="w-1/5 py-4 text-5xl text-primary md:text-9xl"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{

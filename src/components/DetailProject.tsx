@@ -78,8 +78,8 @@ export const DetailProject = ({
                 <Image
                   src={image.src}
                   alt="project image"
-                  width={1080}
-                  height={720}
+                  width={1920}
+                  height={1080}
                   className="mx-auto"
                 />
               </CarouselItem>

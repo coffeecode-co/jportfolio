@@ -49,7 +49,7 @@ export default function Page() {
 
   return (
     <section>
-      <NavBar from="contact" />
+      <NavBar from="sctools" />
       <DetailProject
         title={t('scTools.title')}
         description={t('scTools.desc')}

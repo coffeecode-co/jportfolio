@@ -1,21 +1,64 @@
-import {
-  type ProjectImageType,
-  DetailProject,
+import { DetailProject } from '@/components/DetailProject';
+import type {
+  ProjectImageType,
+  ProjectBadgeType,
+  LinkButtonType,
 } from '@/components/DetailProject';
 import { NavBar } from '@/components/NavBar';
+import { useTranslations } from 'next-intl';
 
-const projectImages: ProjectImageType[] = [
-  { src: 'https://picsum.photos/320/180', alt: 'img1' },
-  { src: 'https://picsum.photos/320/181', alt: 'img2' },
-  { src: 'https://picsum.photos/320/182', alt: 'img3' },
-  { src: 'https://picsum.photos/320/183', alt: 'img4' },
+const scToolsPojectImages: ProjectImageType[] = [
+  {
+    src: 'https://pub-fda94ed7b1d0487db34447feefb77dbb.r2.dev/sc1.png',
+    alt: 'sc functions',
+  },
+  {
+    src: 'https://pub-fda94ed7b1d0487db34447feefb77dbb.r2.dev/sc2.png',
+    alt: 'sc functions 2',
+  },
+  {
+    src: 'https://pub-fda94ed7b1d0487db34447feefb77dbb.r2.dev/sm1.png',
+    alt: 'sm function',
+  },
+  {
+    src: 'https://pub-fda94ed7b1d0487db34447feefb77dbb.r2.dev/ct1.png',
+    alt: 'ct funtion',
+  },
+];
+const scToolsBadges: ProjectBadgeType[] = [
+  { label: 'React', className: 'bg-[#58c4dc] text-[#fff]' },
+  { label: 'TypeScript', className: 'bg-[#3178C6] text-[#fff]' },
+  { label: 'TailwindCSS', className: 'bg-[#00BCFF] text-[#fff]' },
+  { label: 'Vite', className: 'bg-[#FFC820] text-[#fff]' },
+  { label: 'Vitest', className: 'bg-[#729B1B] text-[#fff]' },
+  { label: 'Crxjs' },
+  { label: 'ShadCn', className: 'bg-[#fff] text-[#000]' },
 ];
 
 export default function Page() {
+  const t = useTranslations('ProjectDetails');
+  const scDownloadButton: LinkButtonType = {
+    label: t('scTools.downloadButton.label'),
+    link: t('scTools.downloadButton.link'),
+  };
+
+  const scGoIt: LinkButtonType = {
+    label: t('scTools.goIt.label'),
+    link: t('scTools.goIt.link'),
+  };
+
   return (
-    <section className="h-screen">
+    <section>
       <NavBar from="contact" />
-      <DetailProject images={projectImages} />
+      <DetailProject
+        title={t('scTools.title')}
+        description={t('scTools.desc')}
+        badges={scToolsBadges}
+        images={scToolsPojectImages}
+        download={scDownloadButton}
+        goIt={scGoIt}
+        projectVersion="0.2.0"
+      />
     </section>
   );
 }

@@ -60,12 +60,15 @@
       }
     }
   },
-  "MyProjects": {
-    "title": "Some of my projects",
-    "projectBtn": "See More"
-  },
   "MySkills": {
     "title": "My Skills"
+  },
+  "MyProjects": {
+    "title": "Some of my projects",
+    "projectBtn": "See More",
+    "scTools": {
+      "seeMore": "/en/sctools"
+    }
   },
   "ProjectDetails": {
     "scTools": {

@@ -62,7 +62,10 @@
   },
   "MyProjects": {
     "title": "Algunos de mis proyectos",
-    "projectBtn": "Saber más"
+    "projectBtn": "Saber más",
+    "scTools": {
+      "seeMore": "/es/sctools"
+    }
   },
   "ProjectDetails": {
     "scTools": {

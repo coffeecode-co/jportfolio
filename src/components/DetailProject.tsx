@@ -48,20 +48,22 @@ export const DetailProject = ({
   projectVersion,
 }: DetailProjectProps) => {
   return (
-    <section className="min-h-screen">
-      <h2 className="text-center text-4xl my-8">{title}</h2>
-      <div className="flex flex-wrap items-center justify-center mb-8">
-        {badges.map((badge) => (
-          <Badge
-            key={badge.label}
-            variant={'outline'}
-            className={cn(badge.className, 'mx-0.5 mb-1')}
-          >
-            {badge.label}
-          </Badge>
-        ))}
+    <section className="h-[calc(100vh-4.5rem)] flex flex-col items-center justify-around">
+      <div>
+        <h2 className="text-center text-4xl my-8">{title}</h2>
+        <div className="flex flex-wrap items-center justify-center mb-8">
+          {badges.map((badge) => (
+            <Badge
+              key={badge.label}
+              variant={'outline'}
+              className={cn(badge.className, 'mx-0.5 mb-1')}
+            >
+              {badge.label}
+            </Badge>
+          ))}
+        </div>
       </div>
-      <div className="flex flex-col justify-center items-center w-[80vw] mx-auto mb-8 ">
+      <div className="flex flex-col xl:flex-row justify-center items-center w-[80vw] mx-auto mb-8 ">
         <Carousel
           plugins={[
             Autoplay({
@@ -71,6 +73,7 @@ export const DetailProject = ({
           opts={{
             loop: true,
           }}
+          className="w-2/3"
         >
           <CarouselContent>
             {images.map((image) => (
@@ -88,7 +91,7 @@ export const DetailProject = ({
           <CarouselPrevious className="bg-background/50 left-1 border-primary rounded-sm" />
           <CarouselNext className="bg-background/50 right-1 border-primary rounded-sm" />
         </Carousel>
-        <div className="md:w-8/12">
+        <div className="md:w-8/12 xl:w-1/3">
           <p className="my-8 text-center text-pretty md:mx-8">{description}</p>
           <div className="flex justify-center">
             {download && (

@@ -52,7 +52,7 @@ const removeAnimate = (
 };
 
 export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
-  const { projectName, imgUrl, alt, url } = item;
+  const { projectName, imgUrl, alt, url, seeMoreUrl } = item;
   const elmRef = useRef<HTMLDivElement>(null);
   return (
     <div
@@ -63,6 +63,8 @@ export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
       <AspectRatio ratio={4 / 3}>
         <motion.div
           className="w-full h-full"
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           whileTap={{ scale: 1.1 }}
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -87,7 +89,10 @@ export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
               removeAnimate(e, elmRef);
             }}
           >
-            <ProjectCaption url={url} />
+            <ProjectCaption
+              url={seeMoreUrl ?? url}
+              target={seeMoreUrl ? '_self' : '_blank'}
+            />
           </motion.div>
         </motion.div>
       </AspectRatio>
@@ -95,12 +100,18 @@ export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
   );
 };
 
-const ProjectCaption = ({ url }: { url: string }) => {
+const ProjectCaption = ({
+  url,
+  target,
+}: {
+  url: string;
+  target: '_self' | '_blank';
+}) => {
   const t = useTranslations('MyProjects');
 
   return (
     <div>
-      <Link href={url} target="_blank">
+      <Link href={url} target={target}>
         <Button variant={'outline'} className="border border-primary">
           {t('projectBtn')} <ChevronRight />
         </Button>

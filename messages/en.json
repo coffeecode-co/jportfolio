@@ -60,12 +60,29 @@
       }
     }
   },
-  "MyProjects": {
-    "title": "Some of my projects",
-    "projectBtn": "See More"
-  },
   "MySkills": {
     "title": "My Skills"
+  },
+  "MyProjects": {
+    "title": "Some of my projects",
+    "projectBtn": "See More",
+    "scTools": {
+      "seeMore": "/en/sctools"
+    }
+  },
+  "ProjectDetails": {
+    "scTools": {
+      "title": "ScTools",
+      "desc": "SCTools is a Chrome extension designed to enhance the user experience on some modeling pages by providing utility functions directly within the model view. This extension integrates seamlessly with the target platform, offering features such as quick messages, status indicators and user interface enhancements.",
+      "downloadButton": {
+        "label": "Download LTS",
+        "link": "https://pub-001b6d146cb14cfcac56c049c5d435f1.r2.dev/sctools_0.2.0.zip"
+      },
+      "goIt": {
+        "label": "Go",
+        "link": "https://github.com/webmodelcode/sctools"
+      }
+    }
   },
   "MyService": {
     "title": "My Services",

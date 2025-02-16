@@ -48,7 +48,7 @@ export const DetailProject = ({
   projectVersion,
 }: DetailProjectProps) => {
   return (
-    <section className="h-[calc(100vh-4.5rem)] flex flex-col items-center justify-around">
+    <section className="min-h-[calc(100vh-4.5rem)] flex flex-col items-center justify-around">
       <div>
         <h2 className="text-center text-4xl my-8">{title}</h2>
         <div className="flex flex-wrap items-center justify-center mb-8">

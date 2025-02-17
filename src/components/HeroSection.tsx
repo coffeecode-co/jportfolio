@@ -26,12 +26,7 @@ export const HeroSection = () => {
           />
         </AspectRatio>
         <div className="flex justify-around mt-8">
-          <Link
-            href={
-              'https://pub-001b6d146cb14cfcac56c049c5d435f1.r2.dev/Juan_Pablo_Leon_CV.pdf'
-            }
-            target="_blank"
-          >
+          <Link href={t('cvLink')} target="_blank">
             <Button
               variant="outline"
               className="shadow-none hover:bg-background hover:border-primary min-w-32 w-1/2 mx-2"

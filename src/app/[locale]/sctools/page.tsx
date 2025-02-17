@@ -5,7 +5,19 @@ import type {
   LinkButtonType,
 } from '@/components/DetailProject';
 import { NavBar } from '@/components/NavBar';
+import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: 'ScTools',
+  description: 'Serverless computing tools',
+  keywords: ['serverless', 'sc', 'tools', 'development'],
+  creator: 'Juan Pablo Leon Maya',
+  publisher: 'Juan Pablo Leon Maya',
+  alternates: {
+    languages: { en: 'en', es: 'es' },
+  },
+};
 
 const scToolsPojectImages: ProjectImageType[] = [
   {

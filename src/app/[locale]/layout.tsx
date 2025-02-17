@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     url: 'https://juanpabloleonmaya.vercel.app/',
     siteName: 'Juan Pablo Leon Portfolio',
     type: 'website',
+    images: [
+      {
+        url: 'https://pub-fda94ed7b1d0487db34447feefb77dbb.r2.dev/portfolio-thumb.png', // Must be an absolute URL
+      },
+    ],
   },
 };
 

@@ -115,9 +115,7 @@ export const MyExperience = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="capitalize text-xs md:text-sm">
-                    {t(roleDescription)}
-                  </p>
+                  <p className="text-xs md:text-sm">{t(roleDescription)}</p>
                 </CardContent>
                 <Separator
                   orientation="horizontal"
@@ -145,7 +143,7 @@ const Achievements = ({ achievements }: { achievements: string[] }) => {
       defaultValue="item-0"
       type="single"
       collapsible
-      className="w-full capitalize text-sm"
+      className="w-full text-sm"
     >
       {achievements.map((achievement, i) => {
         return (
@@ -157,7 +155,7 @@ const Achievements = ({ achievements }: { achievements: string[] }) => {
               &nbsp;
             </AccordionTrigger>
             <AccordionContent>
-              <p className="capitalize text-xs md:text-sm">{t(achievement)}</p>
+              <p className="text-xs md:text-sm">{t(achievement)}</p>
             </AccordionContent>
           </AccordionItem>
         );

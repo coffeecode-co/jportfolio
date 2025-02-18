@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -89,44 +88,49 @@ export const MyExperience = () => {
             return (
               <Card
                 key={t(company)}
-                className="flex flex-col items-center justify-around rounded-lg mb-4 border-muted-foreground w-[80vw] md:w-1/3 md:min-h-[93vh] md:max-h-[93vh] lg:min-h-[80vh] lg:max-h-[80vh]"
+                className="flex flex-col items-center justify-around overflow-hidden rounded-lg mb-4 border-muted-foreground w-[80vw] md:w-1/3 md:min-h-[80vh] md:max-h-[80vh] lg:min-h-[70vh] lg:max-h-[70vh] xl:min-h-[60vh] xl:max-h-[60vh]"
               >
-                <CardHeader>
-                  <CardTitle className="text-lg md:text-xl">
-                    <span className="capitalize">{t(company)}</span>
-                    <div className="flex items-center justify-center scale-[.65] text-foreground/50 ">
-                      <p className="">{t(beganDate)}</p>
-                      <Separator
-                        orientation="vertical"
-                        className="h-3 mx-1 bg-primary"
-                      />
-                      <p className="">{t(endDate)}</p>
-                      {urlCompany && (
-                        <Link href={urlCompany}>
-                          <ExternalLink className=" inline-block" />
-                        </Link>
-                      )}
-                    </div>
-                  </CardTitle>
-                  <CardDescription>
-                    <p className="capitalize text-md font-bold md:text-lg">
-                      {t(role)}
+                <Accordion
+                  defaultValue="item-roleDesc"
+                  type="single"
+                  collapsible
+                  className="w-full text-sm"
+                >
+                  <CardHeader>
+                    <CardTitle className="text-lg md:text-xl">
+                      <span className="capitalize">{t(company)}</span>
+                      <div className="flex items-center justify-center scale-[.65] text-foreground/50 ">
+                        <p className="">{t(beganDate)}</p>
+                        <Separator
+                          orientation="vertical"
+                          className="h-3 mx-1 bg-primary"
+                        />
+                        <p className="">{t(endDate)}</p>
+                        {urlCompany && (
+                          <Link href={urlCompany}>
+                            <ExternalLink className=" inline-block" />
+                          </Link>
+                        )}
+                      </div>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <AccordionItem value={`item-roleDesc`}>
+                      <AccordionTrigger>{t(role)}</AccordionTrigger>
+                      <AccordionContent>
+                        <p className="text-xs md:text-sm">
+                          {t(roleDescription)}
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </CardContent>
+                  <CardFooter className="w-full flex-col">
+                    <p className="capitalize text-md md:text-lg">
+                      {t('achievements')}
                     </p>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-xs md:text-sm">{t(roleDescription)}</p>
-                </CardContent>
-                <Separator
-                  orientation="horizontal"
-                  className="h-0.5 bg-primary w-[70%]"
-                />
-                <CardFooter className="w-full flex-col">
-                  <p className="capitalize text-md md:text-lg">
-                    {t('achievements')}
-                  </p>
-                  <Achievements achievements={achievements} />
-                </CardFooter>
+                    <Achievements achievements={achievements} />
+                  </CardFooter>
+                </Accordion>
               </Card>
             );
           }
@@ -139,17 +143,13 @@ export const MyExperience = () => {
 const Achievements = ({ achievements }: { achievements: string[] }) => {
   const t = useTranslations('MyExperience');
   return (
-    <Accordion
-      defaultValue="item-0"
-      type="single"
-      collapsible
-      className="w-full text-sm"
-    >
+    <>
       {achievements.map((achievement, i) => {
         return (
           <AccordionItem
             key={t(achievement).substring(0, 3)}
             value={`item-${i}`}
+            className="w-full"
           >
             <AccordionTrigger dir="rtl" className="h-6 text-xs">
               &nbsp;
@@ -160,6 +160,6 @@ const Achievements = ({ achievements }: { achievements: string[] }) => {
           </AccordionItem>
         );
       })}
-    </Accordion>
+    </>
   );
 };

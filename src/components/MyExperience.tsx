@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,

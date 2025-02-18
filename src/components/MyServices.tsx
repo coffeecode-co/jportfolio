@@ -48,7 +48,7 @@ export const MyServices = () => {
           return (
             <Card
               key={t(service.title)}
-              className="flex flex-col items-center justify-around border-muted-foreground rounded-lg min-h-[70vh] max-h-[70vh] w-[80vw] md:w-1/3 lg:min-h-[60vh] lg:max-h-[60vh]"
+              className="flex flex-col items-center justify-around border-muted-foreground rounded-lg min-h-[40vh] max-h-[50vh] w-[80vw] md:w-1/3 md:min-h-[70vh] md:max-h-[70vh] lg:min-h-[80vh] lg:max-h-[80vh] 2xl:min-h-[60vh] xl:max-h-[60vh]"
             >
               <CardHeader className=" items-center gap-2">
                 <div className="border-2 border-primary rounded-[50%]">

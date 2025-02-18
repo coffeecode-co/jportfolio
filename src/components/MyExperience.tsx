@@ -74,7 +74,7 @@ export const MyExperience = () => {
 
   return (
     <section>
-      <div className="flex items-center flex-col md:flex-row justify-center text-center mt-[-15rem] max-w-[80vw] md:max-w-screen-lg mx-auto">
+      <div className="flex items-start flex-col md:flex-row justify-center text-center mt-[-15rem] max-w-[80vw] md:max-w-screen-lg mx-auto">
         {myExperiences.map(
           ({
             company,
@@ -88,7 +88,7 @@ export const MyExperience = () => {
             return (
               <Card
                 key={t(company)}
-                className="flex flex-col items-center justify-around overflow-hidden rounded-lg mb-4 border-muted-foreground w-[80vw] md:w-1/3 md:min-h-[80vh] md:max-h-[80vh] lg:min-h-[70vh] lg:max-h-[70vh] xl:min-h-[60vh] xl:max-h-[60vh]"
+                className="flex flex-col items-center justify-around overflow-hidden rounded-md mb-4 border-transparent shadow-none w-[80vw] md:w-1/3"
               >
                 <Accordion
                   defaultValue="item-roleDesc"

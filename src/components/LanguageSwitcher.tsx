@@ -11,10 +11,10 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from './ui/button';
 import { Languages } from 'lucide-react';
-import { AvalibleLocales } from '@/i18n/types';
+import { AvailableLocales } from '@/i18n/types';
 import { cn } from '@/lib/utils';
 
-const locales: AvalibleLocales[] = ['en', 'es']; // Add more languages as needed
+const locales: AvailableLocales[] = ['en', 'es']; // Add more languages as needed
 
 export const LanguageSwitcher = ({
   btnClassName,

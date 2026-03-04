@@ -8,7 +8,7 @@ import { Noto_Sans_Mono, Source_Code_Pro } from 'next/font/google';
 import '../globals.css';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import type { AvalibleLocales } from '@/i18n/types';
+import type { AvailableLocales } from '@/i18n/types';
 
 const notoSansMono = Noto_Sans_Mono({
   variable: '--font-noto-sans-mono',
@@ -51,7 +51,7 @@ export default async function RootLayout({
   params: Promise<Params>;
 }>) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale as AvalibleLocales)) {
+  if (!routing.locales.includes(locale as AvailableLocales)) {
     notFound();
   }
 

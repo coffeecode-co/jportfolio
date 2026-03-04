@@ -1,1 +1,1 @@
-export type AvalibleLocales = 'en' | 'es';
+export type AvailableLocales = 'en' | 'es';

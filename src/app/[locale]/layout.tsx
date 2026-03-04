@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 };
 
 interface Params {
-  locale: AvalibleLocales;
+  locale: string;
 }
 
 export default async function RootLayout({
@@ -51,7 +51,7 @@ export default async function RootLayout({
   params: Promise<Params>;
 }>) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale)) {
+  if (!routing.locales.includes(locale as AvalibleLocales)) {
     notFound();
   }
 

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 };
 
 interface Params {
-  locale: string;
+  locale: AvailableLocales;
 }
 
 export default async function RootLayout({

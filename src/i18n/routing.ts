@@ -4,17 +4,16 @@ import {
   LocalePrefixMode,
 } from 'next-intl/routing';
 import { createNavigation } from 'next-intl/navigation';
-import { AvalibleLocales } from './types';
+import { AvailableLocales } from './types';
 
-interface MyRoutingConfig
-  extends RoutingConfig<
-    readonly AvalibleLocales[],
-    LocalePrefixMode,
-    never,
-    never
-  > {
-  locales: AvalibleLocales[];
-  defaultLocale: AvalibleLocales;
+interface MyRoutingConfig extends RoutingConfig<
+  readonly AvailableLocales[],
+  LocalePrefixMode,
+  never,
+  never
+> {
+  locales: AvailableLocales[];
+  defaultLocale: AvailableLocales;
 }
 
 const myRoutingConfig: MyRoutingConfig = {

@@ -60,14 +60,12 @@
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    @apply border-border;
   }
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: var(--font-noto-sans-mono);
+    @apply bg-background text-foreground font-primary;
   }
   body p {
-    font-family: var(--font-source-code-pro);
+    @apply font-foreground;
   }
 }

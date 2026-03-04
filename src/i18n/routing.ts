@@ -6,13 +6,12 @@ import {
 import { createNavigation } from 'next-intl/navigation';
 import { AvalibleLocales } from './types';
 
-interface MyRoutingConfig
-  extends RoutingConfig<
-    readonly AvalibleLocales[],
-    LocalePrefixMode,
-    never,
-    never
-  > {
+interface MyRoutingConfig extends RoutingConfig<
+  readonly AvalibleLocales[],
+  LocalePrefixMode,
+  never,
+  never
+> {
   locales: AvalibleLocales[];
   defaultLocale: AvalibleLocales;
 }

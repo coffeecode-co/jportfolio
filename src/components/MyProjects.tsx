@@ -36,13 +36,6 @@ export const MyProjects = () => {
       url: 'https://docucofi.coficode.dev/',
       seeMoreUrl: t('docucofi.seeMore'),
     },
-    {
-      projectName: 'Espíritu Guerrero',
-      imgUrl:
-        'https://pub-fda94ed7b1d0487db34447feefb77dbb.r2.dev/espiritu-thumbnail-4-3.png',
-      alt: 'Espíritu Guerrero Centro de Rehabilitación',
-      url: 'https://espirituguerrero.com/',
-    },
   ];
   return (
     <section className="my-16" id={'projects'}>

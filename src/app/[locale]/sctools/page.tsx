@@ -38,13 +38,13 @@ const scToolsPojectImages: ProjectImageType[] = [
   },
 ];
 const scToolsBadges: ProjectBadgeType[] = [
-  { label: 'React', className: 'bg-[#58c4dc] text-[#fff]' },
-  { label: 'TypeScript', className: 'bg-[#3178C6] text-[#fff]' },
-  { label: 'TailwindCSS', className: 'bg-[#00BCFF] text-[#fff]' },
-  { label: 'Vite', className: 'bg-[#FFC820] text-[#fff]' },
-  { label: 'Vitest', className: 'bg-[#729B1B] text-[#fff]' },
+  { label: 'React', className: 'bg-[#58c4dc] text-white' },
+  { label: 'TypeScript', className: 'bg-[#3178C6] text-white' },
+  { label: 'TailwindCSS', className: 'bg-[#00BCFF] text-white' },
+  { label: 'Vite', className: 'bg-[#FFC820] text-white' },
+  { label: 'Vitest', className: 'bg-[#729B1B] text-white' },
   { label: 'Crxjs' },
-  { label: 'ShadCn', className: 'bg-[#fff] text-[#000]' },
+  { label: 'ShadCn', className: 'bg-white text-black' },
 ];
 
 export default function Page() {

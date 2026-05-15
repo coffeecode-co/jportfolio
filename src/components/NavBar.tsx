@@ -60,7 +60,7 @@ export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="!h-7 !w-7" />
+                <Menu className="h-7! w-7!" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

@@ -69,9 +69,24 @@
     "projectBtn": "See More",
     "scTools": {
       "seeMore": "/en/sctools"
+    },
+    "mangoAssistant": {
+      "seeMore": "/en/mango-assistant"
     }
   },
   "ProjectDetails": {
+    "mangoAssistant": {
+      "title": "Mango",
+      "desc": "A keyboard-driven TUI for running your shell command sequences — no more copy-pasting the same commands. Define macros (named sequences of shell commands) grouped by category, pick one from the TUI, and it runs with real-time output streaming. Macros that need input show a prompt dialog before running.",
+      "pypi": {
+        "label": "PyPI",
+        "link": "https://pypi.org/project/mango-tui/"
+      },
+      "goIt": {
+        "label": "GitHub",
+        "link": "https://github.com/juanleon8581/mango-assistant"
+      }
+    },
     "scTools": {
       "title": "ScTools",
       "desc": "SCTools is a Chrome extension designed to enhance the user experience on some modeling pages by providing utility functions directly within the model view. This extension integrates seamlessly with the target platform, offering features such as quick messages, status indicators and user interface enhancements.",

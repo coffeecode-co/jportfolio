@@ -19,7 +19,7 @@ interface MenuItem {
   href: string;
 }
 
-type FromProp = 'index' | 'contact' | 'sctools';
+type FromProp = 'index' | 'contact' | 'sctools' | 'mango-assistant';
 
 export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
   const t = useTranslations('Navbar');

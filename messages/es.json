@@ -66,19 +66,49 @@
     "projectBtn": "Saber más",
     "scTools": {
       "seeMore": "/es/sctools"
+    },
+    "mangoAssistant": {
+      "seeMore": "/es/mango-assistant"
+    },
+    "docucofi": {
+      "seeMore": "/es/docucofi"
     }
   },
   "ProjectDetails": {
+    "docucofi": {
+      "title": "Docucofi",
+      "desc": "DocuCofi es una aplicación web que simplifica la generación de documentos formales para freelancers y equipos pequeños. Los usuarios seleccionan una plantilla, completan los campos requeridos y reciben un PDF listo para descargar. Soporta generación de facturas de servicio, múltiples idiomas y modo oscuro/claro.",
+      "github": {
+        "label": "GitHub",
+        "link": "https://github.com/juanleon8581/docucofi"
+      },
+      "goIt": {
+        "label": "Visitar",
+        "link": "https://docucofi.coficode.dev/"
+      }
+    },
+    "mangoAssistant": {
+      "title": "Mango",
+      "desc": "Una TUI con navegación por teclado para ejecutar tus secuencias de comandos de shell — sin más copiar y pegar los mismos comandos. Define macros (secuencias de comandos nombradas) agrupadas por categoría, elige una desde la TUI y se ejecuta con salida en tiempo real. Las macros que necesitan entrada muestran un diálogo de parámetros antes de ejecutarse.",
+      "pypi": {
+        "label": "PyPI",
+        "link": "https://pypi.org/project/mango-tui/"
+      },
+      "goIt": {
+        "label": "GitHub",
+        "link": "https://github.com/juanleon8581/mango-assistant"
+      }
+    },
     "scTools": {
-      "title": "ScTools",
-      "desc": "SCTools es una extensión de Chrome diseñada para mejorar la experiencia del usuario en algunas paginas de modelage, proporcionando funciones de utilidad directamente dentro de la vista del modelo. Esta extensión se integra perfectamente con la plataforma objetivo, ofreciendo funciones como mensajes rápidos, indicadores de estado y mejoras en la interfaz de usuario.",
+      "title": "Redna-Models",
+      "desc": "Redna-Models es una extensión de Chrome diseñada para mejorar la experiencia del usuario en plataformas de modelaje, proporcionando funciones de utilidad directamente dentro de la vista del modelo. Esta extensión se integra perfectamente con las plataformas objetivo, ofreciendo funciones como mensajes rápidos, indicadores de estado, mejoras en la interfaz de usuario y herramientas de traducción integradas para comunicarse superando la barrera del idioma.",
       "downloadButton": {
         "label": "Ultima version estable",
-        "link": "https://pub-001b6d146cb14cfcac56c049c5d435f1.r2.dev/sctools_LTS.zip"
+        "link": "https://www.estrellaswebcam.com/descargas"
       },
       "goIt": {
         "label": "Ir",
-        "link": "https://github.com/webmodelcode/sctools"
+        "link": "https://www.estrellaswebcam.com/guides/extensiones/redna-models"
       }
     }
   },

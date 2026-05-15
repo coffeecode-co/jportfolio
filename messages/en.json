@@ -69,19 +69,49 @@
     "projectBtn": "See More",
     "scTools": {
       "seeMore": "/en/sctools"
+    },
+    "mangoAssistant": {
+      "seeMore": "/en/mango-assistant"
+    },
+    "docucofi": {
+      "seeMore": "/en/docucofi"
     }
   },
   "ProjectDetails": {
+    "docucofi": {
+      "title": "Docucofi",
+      "desc": "DocuCofi is a web application that simplifies formal document generation for freelancers and small teams. Users select from a template catalog, fill in the required fields, and receive a downloadable PDF. It supports service invoice generation, multi-language support, and dark/light mode.",
+      "github": {
+        "label": "GitHub",
+        "link": "https://github.com/juanleon8581/docucofi"
+      },
+      "goIt": {
+        "label": "Visit",
+        "link": "https://docucofi.coficode.dev/"
+      }
+    },
+    "mangoAssistant": {
+      "title": "Mango",
+      "desc": "A keyboard-driven TUI for running your shell command sequences — no more copy-pasting the same commands. Define macros (named sequences of shell commands) grouped by category, pick one from the TUI, and it runs with real-time output streaming. Macros that need input show a prompt dialog before running.",
+      "pypi": {
+        "label": "PyPI",
+        "link": "https://pypi.org/project/mango-tui/"
+      },
+      "goIt": {
+        "label": "GitHub",
+        "link": "https://github.com/juanleon8581/mango-assistant"
+      }
+    },
     "scTools": {
-      "title": "ScTools",
-      "desc": "SCTools is a Chrome extension designed to enhance the user experience on some modeling pages by providing utility functions directly within the model view. This extension integrates seamlessly with the target platform, offering features such as quick messages, status indicators and user interface enhancements.",
+      "title": "Redna-Models",
+      "desc": "Redna-Models is a Chrome extension designed to enhance the user experience on modeling platforms by providing utility functions directly within the model view. This extension integrates seamlessly with the target platforms, offering features such as quick messages, status indicators, user interface enhancements, and built-in translation tools to communicate across language barriers.",
       "downloadButton": {
         "label": "Download LTS",
-        "link": "https://pub-001b6d146cb14cfcac56c049c5d435f1.r2.dev/sctools_LTS.zip"
+        "link": "https://www.estrellaswebcam.com/descargas"
       },
       "goIt": {
         "label": "Go",
-        "link": "https://github.com/webmodelcode/sctools"
+        "link": "https://www.estrellaswebcam.com/guides/extensiones/redna-models"
       }
     }
   },

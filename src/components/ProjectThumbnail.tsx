@@ -75,7 +75,7 @@ export const ProjectThumbnail = ({ item }: ProjectThumbnailProp) => {
           <Image
             src={imgUrl}
             alt={alt}
-            className="rounded-md object-cover mx-auto w-full"
+            className="rounded-md object-cover object-center mx-auto w-full h-full"
             height={300}
             width={400}
           />

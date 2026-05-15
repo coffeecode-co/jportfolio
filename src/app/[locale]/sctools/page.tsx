@@ -9,9 +9,9 @@ import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
-  title: 'ScTools',
-  description: 'Serverless computing tools',
-  keywords: ['serverless', 'sc', 'tools', 'development'],
+  title: 'Redna-Models',
+  description: 'Chrome extension that enhances user experience on modeling platforms with utility functions and translation features',
+  keywords: ['chrome extension', 'redna', 'models', 'translation', 'webcam', 'modeling'],
   creator: 'Juan Pablo Leon Maya',
   publisher: 'Juan Pablo Leon Maya',
   alternates: {
@@ -43,7 +43,7 @@ const scToolsBadges: ProjectBadgeType[] = [
   { label: 'TailwindCSS', className: 'bg-[#00BCFF] text-white' },
   { label: 'Vite', className: 'bg-[#FFC820] text-white' },
   { label: 'Vitest', className: 'bg-[#729B1B] text-white' },
-  { label: 'Crxjs' },
+  { label: 'WXT' },
   { label: 'ShadCn', className: 'bg-white text-black' },
 ];
 

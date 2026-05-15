@@ -100,15 +100,15 @@
       }
     },
     "scTools": {
-      "title": "ScTools",
-      "desc": "SCTools es una extensión de Chrome diseñada para mejorar la experiencia del usuario en algunas paginas de modelage, proporcionando funciones de utilidad directamente dentro de la vista del modelo. Esta extensión se integra perfectamente con la plataforma objetivo, ofreciendo funciones como mensajes rápidos, indicadores de estado y mejoras en la interfaz de usuario.",
+      "title": "Redna-Models",
+      "desc": "Redna-Models es una extensión de Chrome diseñada para mejorar la experiencia del usuario en plataformas de modelaje, proporcionando funciones de utilidad directamente dentro de la vista del modelo. Esta extensión se integra perfectamente con las plataformas objetivo, ofreciendo funciones como mensajes rápidos, indicadores de estado, mejoras en la interfaz de usuario y herramientas de traducción integradas para comunicarse superando la barrera del idioma.",
       "downloadButton": {
         "label": "Ultima version estable",
-        "link": "https://pub-001b6d146cb14cfcac56c049c5d435f1.r2.dev/sctools_LTS.zip"
+        "link": "https://www.estrellaswebcam.com/descargas"
       },
       "goIt": {
         "label": "Ir",
-        "link": "https://github.com/webmodelcode/sctools"
+        "link": "https://www.estrellaswebcam.com/guides/extensiones/redna-models"
       }
     }
   },

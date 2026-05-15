@@ -45,7 +45,7 @@ export const Footer = () => {
             return (
               <Button key={sm.name} variant={'ghost'} asChild>
                 <Link href={sm.url} target="_blank">
-                  <sm.icon className="!h-5 !w-5" />
+                  <sm.icon className="h-5! w-5!" />
                 </Link>
               </Button>
             );

@@ -13,7 +13,7 @@ import {
 import { Badge } from './ui/badge';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
-import { Download, ExternalLink } from 'lucide-react';
+import { Code2, Download, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export type ProjectImageType = {
@@ -35,6 +35,7 @@ interface DetailProjectProps {
   images: ProjectImageType[];
   download?: LinkButtonType;
   goIt?: LinkButtonType;
+  github?: LinkButtonType;
   projectVersion?: string;
 }
 
@@ -45,6 +46,7 @@ export const DetailProject = ({
   images,
   download,
   goIt,
+  github,
   projectVersion,
 }: DetailProjectProps) => {
   return (
@@ -107,6 +109,14 @@ export const DetailProject = ({
                     </span>
                   )}
                   <Download />
+                </Button>
+              </Link>
+            )}
+            {github && (
+              <Link href={github.link} target="_blank">
+                <Button variant={'outline'}>
+                  <span>{github.label}</span>
+                  <Code2 />
                 </Button>
               </Link>
             )}

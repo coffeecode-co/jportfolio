@@ -19,7 +19,7 @@ interface MenuItem {
   href: string;
 }
 
-type FromProp = 'index' | 'contact' | 'sctools';
+type FromProp = 'index' | 'contact' | 'sctools' | 'mango-assistant' | 'docucofi';
 
 export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
   const t = useTranslations('Navbar');
@@ -60,7 +60,7 @@ export const NavBar = ({ from = 'index' }: { from?: FromProp }) => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="!h-7 !w-7" />
+                <Menu className="h-7! w-7!" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

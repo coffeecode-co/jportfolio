@@ -12,7 +12,7 @@ import ProfileImg from '@/../public/profile-cartoon.png';
 export const HeroSection = () => {
   const t = useTranslations('HeroSection');
   return (
-    <main className=" flex flex-col items-center justify-center bg-background text-foreground min-h-screen w-[80vw] max-w-screen-lg mx-auto">
+    <main className=" flex flex-col items-center justify-center bg-background text-foreground min-h-screen w-[80vw] max-w-(--breakpoint-lg) mx-auto">
       <h1 className="text-4xl font-bold mb-4 text-center md:text-5xl">
         {t('title')}
       </h1>

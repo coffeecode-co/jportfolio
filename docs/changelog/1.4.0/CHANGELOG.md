@@ -4,6 +4,9 @@
 
 ### Added
 - Add CLAUDE.md with project guidance and architecture documentation (4f5b237)
+- Add mango-assistant project to portfolio (83eecc8)
+- Add Docucofi project page and update project details component to support GitHub links (e73116a)
+- Rename ScTools to Redna-Models, update project metadata, and migrate documentation links (864d964)
 
 ### Changed
 - Upgrade Tailwind CSS to v4 (30f4920)

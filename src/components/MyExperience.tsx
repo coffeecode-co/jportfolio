@@ -74,7 +74,7 @@ export const MyExperience = () => {
 
   return (
     <section>
-      <div className="flex items-start flex-col md:flex-row justify-center text-center mt-[-15rem] max-w-[80vw] md:max-w-screen-lg mx-auto">
+      <div className="flex items-start flex-col md:flex-row justify-center text-center -mt-60 max-w-[80vw] md:max-w-(--breakpoint-lg) mx-auto">
         {myExperiences.map(
           ({
             company,

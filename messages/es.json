@@ -69,9 +69,24 @@
     },
     "mangoAssistant": {
       "seeMore": "/es/mango-assistant"
+    },
+    "docucofi": {
+      "seeMore": "/es/docucofi"
     }
   },
   "ProjectDetails": {
+    "docucofi": {
+      "title": "Docucofi",
+      "desc": "DocuCofi es una aplicación web que simplifica la generación de documentos formales para freelancers y equipos pequeños. Los usuarios seleccionan una plantilla, completan los campos requeridos y reciben un PDF listo para descargar. Soporta generación de facturas de servicio, múltiples idiomas y modo oscuro/claro.",
+      "github": {
+        "label": "GitHub",
+        "link": "https://github.com/juanleon8581/docucofi"
+      },
+      "goIt": {
+        "label": "Visitar",
+        "link": "https://docucofi.coficode.dev/"
+      }
+    },
     "mangoAssistant": {
       "title": "Mango",
       "desc": "Una TUI con navegación por teclado para ejecutar tus secuencias de comandos de shell — sin más copiar y pegar los mismos comandos. Define macros (secuencias de comandos nombradas) agrupadas por categoría, elige una desde la TUI y se ejecuta con salida en tiempo real. Las macros que necesitan entrada muestran un diálogo de parámetros antes de ejecutarse.",
